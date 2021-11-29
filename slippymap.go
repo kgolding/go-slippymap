@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-// LatLng2TileZoomXY takes a latitude. longtitude and zoom level and returns a slippy map x,y tile cord
+// LatLng2TileZoomXY takes a latitude, longtitude and zoom level and returns a slippy map x,y tile cord
 func LatLng2TileZoomXY(lat float64, lng float64, zoom int) (int, int, error) {
 	if zoom < 0 || zoom > 30 {
 		return 0, 0, fmt.Errorf("invalid zoom %d", zoom)
